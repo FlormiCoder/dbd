@@ -9,7 +9,7 @@
   "engines": {
     "node": "12.x"
   },
-  "author": "",
+  "author": "flormi",
   "license": "ISC",
   "dependencies": {
     "aoi.js": "^4.4.4"
