@@ -1,21 +1,21 @@
 const Aoijs = require("aoi.js")
 
 const bot = new Aoijs.Bot({
-token: "TOKEN", //TOKEN YOUR BOT(ТОКЕН ВАШЕГО БОТА)
-prefix: "PREFIX" //PREFIX YOUR BOT(ПРЕФИКС ВАШЕГО БОТА)
+token: "ODA2MTYzNTExNjI0NTk3NTA0.YBlcRg.nZImzb0kfRgMJ6WlJewNgdVGys4", //TOKEN YOUR BOT(ТОКЕН ВАШЕГО БОТА)
+prefix: "/" //PREFIX YOUR BOT(ПРЕФИКС ВАШЕГО БОТА)
 })
 bot.onMessage()
 //commands(команды)
 
 bot.command({
-name: "ping", //Trigger(Триггер команды)
-code: `$ping Pong!` //Code(Код команды)
+name: "пинг", //Trigger(Триггер команды)
+code: `пинг бота $ping` //Code(Код команды)
 })
 
 //status(статус бота)
 
 bot.status({
-  text: "Status your bot",
+  text: "тестируется на aoi",
   type: "WATCHING",
   time: 12
 })
