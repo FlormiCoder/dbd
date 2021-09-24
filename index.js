@@ -57,28 +57,23 @@ $title[Информация о системе]
 })
 
 bot.command({
-name: "сервер",
-aliases: ["server-info","si"],
-code: `
-$reply[$messageID;
-{color:00ff00}
-{title:Информация о сервере}
-{field:Владелец: <@$ownerID> | $username[$ownerID]#$discriminator[$ownerID]}
-{field:ID сервера: \`$guildID\`}
-{field:Регион: \`$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$serverRegion;brazil;Бразилия];russia;Россия];europe;Европы];hong kong;Гонконг];india;Индия];Japane;Япония];Singapore;Сингапур];south africa;Южная Африка];sydney;Сидней];us central;Центральная часть Сша];us west;Западная часть США];us east;Восточная часть США];us south; Южная часть США]\`}
-{field:Уровень проверки: \`$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$serverVerificationLevel;None;Выключено];Low;Низкий];Medium;Средний];High;Высокий];Very High;Очень высокий]\`}
-{field:Фильтр содержимого: \`$replaceText[$replaceText[$replaceText[$serverContentFilter;All Members;Фильтрация всех пользователей];Members Without Roles;Фильтрация пользователей без роли];Disabled;Фильтрация отключена]\`}
-{field:Канал системных сообщений: $replaceText[<#$systemChannelID>;<#>;Такого канала нет]}
-{field:Уровень буста: \`$serverBoostLevel\`}
-{field:Всего бустов: \`$serverBoostCount\`}
-{field:Забаненых: \`$replaceText[$banCount;missing permissions;У меня нет прав на просмотр забаненых пользователей]\`}
-{field:Человек: \`$membersCount\`}
-{field:Ботов: \`$botCount\`}
-{field:Каналов: \`$channelCount\`}
-{field:Ролей: \`$roleCount\`}
-{field:Эмодзей: \`$emojiCount\`}
-{field:Инвайт: $getServerInvite}]
-`
+  name: "профиль",
+  aliases: ['user'],
+  cat: "Информация",
+  desc: "Выдает инофрмацию о пользователе",
+  usage: "mr:user (user)",
+  code: `
+  $thumbnail[$userAvatar[$findUser[$message[1]]]]
+  $title[Информация о пользователе - $username[$findUser[$message[1]]]]
+  $description[**Имя** - $username[$findUser[$message[1]]]
+**Статус** - $replaceText[$replaceText[$replaceText[$replaceText[$status[$findUser[$message[1]]];online;В сети;-1];offline;Не в сети;-1];idle;Не активен;-1];dnd;Не беспокоить;-1]
+**Пользовательский статус** - $replaceText[$replaceText[$checkCondition[$getCustomStatus[$findUser[$message];emote]$getCustomStatus[$findUser[$message];state]==nonenone];true;Отсутствует];false;$replaceText[$replaceText[$checkCondition[$getCustomStatus[$findUser[$message];emote]$getCustomStatus[$findUser[$message];state]==$getCustomStatus[$findUser[$message];emote]none];true;$getCustomStatus[$findUser[$message];emote]];false;$replaceText[$replaceText[$checkCondition[$getCustomStatus[$findUser[$message];emote]$getCustomStatus[$findUser[$message];state]==none$getCustomStatus[$findUser[$message];state]];true;$getCustomStatus[$findUser[$message];state]];false;$getCustomStatus[$findUser[$message];emote] $getCustomStatus[$findUser[$message];state]]
+**Платформа** - $replaceText[$replaceText[$replaceText[$replaceText[$platform[$findUser[$message[1]]];none;❓ Отсутствует;-1];web;📄 Браузер;-1];mobile;📱 Телефон;-1];desktop;🖥️ Компьютер;-1]
+**Дата создания** - $creationDate[$findUser[$message[1]];date]
+**Присоединился** - $memberJoinedDate[$findUser[$message]]]
+$footer[ID: $findUser[$message]]
+  $color[GREEN]
+  `
 })
 
 bot.command({
@@ -93,6 +88,33 @@ $onlyPerms[managemessages;Не достаточно прав! необходим
 $addCmdReactions[🧹]
 $suppressErrors
 $argsCheck[>1;{description: Введите на сколько сообщений вы хотите очистить чат}]`})
+
+bot.command({
+  name: "сервер",
+  aliases: ['guild'],
+  cat: "Информация",
+  desc: "Выдает статистику сервера",
+  usage: "mr:server/guild",
+  code: `$title[Информация о сервер: $serverName]
+  $thumbnail[$serverIcon]
+  $addField[Остальное;• **Создатель** - $username[$ownerID]
+  • **Дата Создания** - $creationDate[$guildID]
+  • **Уровень Верефикации** - $replaceText[$replaceText[$replaceText[$replaceText[$serverVerificationLevel;Low;Низкий;-1];Very High;Очень Высокий;-1];Medium;Средний;-1];High;Высокий;-1]
+  • **Регион** - $replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$serverRegion;frankfurt; Франкфурт];brazil; Бразилия];europe; Европа];hongkong; Гонконг];india; Индия];japan; Япония];russia; Россия];singapore; Сингапур];southafrica; Южная Африка];sydney; Сидней];us-central; Центральная часть США];us-east; Восток США];us-south; Юг США];us-west; Запад США];amsterdam; Амстердам];dubai; Дубай];south-korea; Южная Корея];london; Лондон];eu-west; Западная Европа];eu-central; Центральная Европа]
+  • **Уровень буста** - $replaceText[$replaceText[$checkCondition[$serverBoostLevel<2];true;Нет уровня];false;$replaceText[$replaceText[$checkCondition[$serverBoostLevel<15];true;1 (Бусты: $serverBoostLevel)];false;$replaceText[$replaceText[$checkCondition[$serverBoostLevel<30];true;2 (Бусты: $serverBoostLevel)];false;3 (Бусты: $serverBoostLevel)]]]]
+  $addField[Каналы (Всего: $channelCount);<:text:815564331629412352> **Текстовые** - $channelCount[text]
+<:voice:815564247517626388> **Голосовые** - $channelCount[voice]
+<:category:815564242550915093> **Категории** - $channelCount[category]]
+$addField[Подробно о статусах;<:online:831120014639497247> **В сети** - $membersCount[$guildId;online]
+<:idle:831120069513445376> **Неактивны** - $membersCount[$guildId;idle]
+<:dnd:831120124445589544> **Не беспокоить** - $membersCount[$guildId;dnd]
+<:offline:831120530278055966> **Не в сети**- $membersCount[$guildId;offline];yes]
+$addField[Участники;<:rules:815564316010217472> **Всего** - $membersCount
+<:user_aue:817840607087165451> **Люди** - $sub[$membersCount;$botCount]
+<:bot:815564333786464257> **Боты** - $botCount;yes]
+$color[GREEN]
+`
+})
 
 //status(статус бота)
 
