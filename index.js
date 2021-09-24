@@ -2,10 +2,15 @@ const Aoijs = require("aoi.js")
 
 const bot = new Aoijs.Bot({
 token: "ODA2MTYzNTExNjI0NTk3NTA0.YBlcRg.nZImzb0kfRgMJ6WlJewNgdVGys4", //TOKEN YOUR BOT(ТОКЕН ВАШЕГО БОТА)
-prefix: "/" //PREFIX YOUR BOT(ПРЕФИКС ВАШЕГО БОТА)
+prefix: "$getServerVar[prefix]" //PREFIX YOUR BOT(ПРЕФИКС ВАШЕГО БОТА)
 })
 bot.onMessage()
 //commands(команды)
+
+bot.command({
+   name: "$alwaysExecute",
+   code: `$setUserVar[messages;$sum[$getUserVar[messages];1]]`
+})
 
 bot.command({
 name: "пинг", //Trigger(Триггер команды)
@@ -52,6 +57,20 @@ $reply[$messageID;
 `
 })
 
+bot.command({
+ name: "очистить", 
+ aliases: ['clean'],
+ code: `$title[Очистка] 
+$description[Чат очищен на $message[1] сообщений! Администратор: <@$authorID>.]
+$color[RANDOM]
+$clear[$message[1]]
+$onlyIf[$message<=100;{description:Я не могу очистить больше чем 100 сообщений}]
+$onlyFor[managemessages;{description:Не достаточно прав! необходимо: ****Удаление сообщений****}]
+$addCmdReactions[🧹]
+$deleteIn[1m]
+$suppressErrors
+$argsCheck[>1;{description: Введите на сколько сообщений вы хотите очистить чат}]`})
+
 //status(статус бота)
 
 bot.status({
@@ -63,6 +82,6 @@ bot.status({
 //variables(переменные)
 
 bot.variables({
-  Name1: 'Value1',
-  Name2: 'Value2'
+  message: '0',
+  prefix: '/'
 })
