@@ -20,12 +20,11 @@ bot.command({
     {title:Префикс успешно изменён!}
     {description:**Новый префикс\:** \`$message[1]\`}
   ;no]
-  $color[00ff00]
   $setServerVar[prefix;$message[1]]
   $onlyIf[$charCount[$message[1]]<=3;:x:\`Префикс не может быть длиннее 3 символов!\`]
   $onlyIf[$message[1]!=;:x:\`Префикс не может быть пустым!\`]
   $onlyPerms[manageserver;:x:\`У вас недостаточно прав для смены префикса!\`]
-  `
+  $color[00ff00]`
 })
 
 bot.command({
