@@ -51,7 +51,7 @@ $title[Информация о системе]
   $addField[Память;**Доступно:** $sub[$maxRam;$ram] МБ
 **Всего:** $maxRam МБ
 **Потребление:** $ram МБ]
-{color:00ff00}`
+$color[00ff00]`
 })
 
 bot.command({
