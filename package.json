@@ -1,7 +1,7 @@
 {
   "name": "MyBot",
   "version": "1.0.0",
-  "description": "",
+  "description": "My bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -12,6 +12,6 @@
   "author": "flormi",
   "license": "ISC",
   "dependencies": {
-    "aoi.js": "^4.4.4"
+    "dbd.js": "^3.0.2"
   }
 }
