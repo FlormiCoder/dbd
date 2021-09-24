@@ -9,7 +9,7 @@ bot.onMessage()
 
 bot.command({
    name: "$alwaysExecute",
-   code: `$setUserVar[messages;$sum[$getUserVar[messages];1]]`
+   code: `$setUserVar[message;$sum[$getUserVar[message];1]]`
 })
 
 bot.command({
