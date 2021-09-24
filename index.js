@@ -34,7 +34,7 @@ code: `
 $reply[$messageID;
 {color:00ff00}
 {title:Информация о сервере}
-{field:Владелец: <@$ownerID> | $username[$ownerID]$discriminator[$ownerID]}
+{field:Владелец: <@$ownerID> | $username[$ownerID]#$discriminator[$ownerID]}
 {field:ID сервера: \`$guildID\`}
 {field:Регион: \`$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$serverRegion;brazil;Бразилия];russia;Россия];europe;Европы];hong kong;Гонконг];india;Индия];Japane;Япония];Singapore;Сингапур];south africa;Южная Африка];sydney;Сидней];us central;Центральная часть Сша];us west;Западная часть США];us east;Восточная часть США];us south; Южная часть США]\`}
 {field:Уровень проверки: \`$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$serverVerificationLevel;None;Выключено];Low;Низкий];Medium;Средний];High;Высокий];Very High;Очень высокий]\`}
