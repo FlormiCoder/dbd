@@ -26,9 +26,9 @@ code: `
 $title[Информация о системе]
   $addField[Система;**CPU:** $djsEval[require("os").cpus()[0].model;yes]
 **ОС:** $djsEval[require("os").platform;yes] x64]
-  $addField[Память;**Доступно:** $sub[$maxRam;$ram]mb
-**Всего:** $maxRammb
-**Потребление:** $rammb]
+  $addField[Память;**Доступно:** $sub[$maxRam;$ram] МБ
+**Всего:** $maxRam МБ
+**Потребление:** $ram МБ]
 $color[00ff00]`
 })
 
