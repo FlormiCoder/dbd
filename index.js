@@ -21,7 +21,7 @@ bot.loopCommand({
 
 bot.command({
   name: "плэй",
-  code: `$playSong[$message;1m;Ошибка;Не удалось найти музыку!]`
+  code: `$playSong[$message;1m;no;no;Не удалось найти музыку!]`
 })
 
 bot.command({
