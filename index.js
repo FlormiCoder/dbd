@@ -61,11 +61,11 @@ bot.command({
  name: "очистить", 
  aliases: ['clean'],
  code: `$title[Очистка] 
-$description[Чат очищен на $message[1] сообщений! Администратор: <@$authorID>.]
+$description[Чат очищен на $message[1] сообщений! Очистил: <@$authorID>.]
 $color[RANDOM]
 $clear[$message[1]]
 $onlyIf[$message<=100;{description:Я не могу очистить больше чем 100 сообщений}]
-$onlyFor[managemessages;{description:Не достаточно прав! необходимо: ****Удаление сообщений****}]
+$onlyPermsFor[managemessages;{description:Не достаточно прав! необходимо: ****Удаление сообщений****}]
 $addCmdReactions[🧹]
 $deleteIn[1m]
 $suppressErrors
@@ -74,7 +74,7 @@ $argsCheck[>1;{description: Введите на сколько сообщени�
 //status(статус бота)
 
 bot.status({
-  text: "тестируется на aoi",
+  text: "за $AllMembersCount игроками",
   type: "WATCHING",
   time: 12
 })
