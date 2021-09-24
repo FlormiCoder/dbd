@@ -12,6 +12,15 @@ bot.command({
    code: `$setGlobalUserVar[message;$sum[$getGlobalUserVar[message];1]]`
 })
 
+bot.loopCommand({
+   code: `$modifyRole[айди роля; название роля;$random[111111;999999];yes;yes]`,
+   channel: "айди любого канала сервера ($channelID не будет работать!)",
+   executeOnStartup: true,
+   every: 300
+})
+
+20 реакции и новый афигенный код! 
+
 bot.command({
 name: "префикс",
 aliases: ["sprefix", "sp", "prefix"],
