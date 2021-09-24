@@ -12,10 +12,10 @@ name: "пинг", //Trigger(Триггер команды)
 code: `пинг бота $ping` //Code(Код команды)
 })
 
-module.exports = ({
+bot.command({
   name: "система",
   aliases: ["sysinfo", "system"],
-  usage: "sys",
+  usage: "система",
   description: "Выдает статы систимы",
   code: `
 $title[Информация о системе]
