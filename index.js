@@ -9,7 +9,7 @@ bot.onMessage()
 
 bot.command({
    name: "$alwaysExecute",
-   code: `$setUserVar[message;$sum[$getUserVar[message];1]]`
+   code: `$setGlobalUserVar[message;$sum[$getGlobalUserVar[message];1]]`
 })
 
 bot.command({
@@ -65,7 +65,7 @@ $description[Чат очищен на $message[1] сообщений! Очист
 $color[RANDOM]
 $clear[$message[1]]
 $onlyIf[$message<=100;{description:Я не могу очистить больше чем 100 сообщений}]
-$onlyFor[managemessages;Не достаточно прав! необходимо ****Управление сообщениями****]
+$onlyPerms[managemessages;Не достаточно прав! необходимо ****Управление сообщениями****]
 $addCmdReactions[🧹]
 $suppressErrors
 $argsCheck[>1;{description: Введите на сколько сообщений вы хотите очистить чат}]`})
