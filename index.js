@@ -32,7 +32,7 @@ name: "сервер",
 aliases: ["server-info","si"],
 code: `
 $reply[$messageID;
-{color:313131}
+{color:00ff00}
 {title:Информация о сервере}
 {field:Владелец: <@$ownerID> | $username[$ownerID]$discriminator[$ownerID]}
 {field:ID сервера: \`$guildID\`}
