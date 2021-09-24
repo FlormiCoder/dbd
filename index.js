@@ -20,6 +20,76 @@ bot.loopCommand({
 })
 
 bot.command({
+  name: "плэй",
+  aliases: ["p"],
+  code: `
+$description[
+$playSong[$message;1m;{title:Error}{description:**:no_entry: Произошла ошибка при запросе**}{color:RED}]
+$onlyIf[$message!=;{title:Error}{description:**:no_entry: Мне нужно имя что бы найти** \`песню\`...}]
+$onlyIf[$voiceID!=;**:no_entry: Подключитесь к голосовому каналу.**]
+$cooldown[5s;Подождите **%time%** для использования команды]
+$author[:arrow_forward:Добавление в очередь;]
+$color[#add8e0]
+`
+});
+
+bot.musicStartCommand({
+  channel: "$channelID",
+  code: `$author[Сейчас играет;https://bigsmokebot.ga/music.png]
+$description[**__Автор__**: [$songInfo[publisher]\\]($songInfo[publisher_url])
+**__Песня__**: [$songInfo[title]\\]($songInfo[url])
+**__Продолжительность__**: $songInfo[duration]
+$thumbnail[$songInfo[thumbnail]]
+$footer[Заказ от $userTag[$songInfo[userID]];$userAvatar[$songInfo[userID]]]
+$color[#add8e6]`
+});
+
+bot.command({
+  name: "стоп",
+  code: `$stopSong
+  $title[🔊 Музыка]
+  $description[⏹️ Текущая музыка была выключена!]
+  $footer[Выключил $username;$authorAvatar]
+  $addTimestamp`
+})
+
+bot.command({
+name: "пауза",
+code: `$pauseSong
+  $title[🔊 Музыка]
+  $description[⏸️ Музыку поставлено на паузу!]
+  $footer[Поставил на паузу $username;$authorAvatar]
+  $addTimestamp`
+})
+
+bot.command({
+  name: "громкость",
+  code: `$volume[$message]
+  $title[🔊 Музыка]
+  $description[🔉 Громкость музыки установлена на ****$message %****]
+  $footer[Громкость изменена $username;$authorAvatar]
+  $addTimestamp`
+})
+
+bot.command({
+  name: "скип",
+  code: `$skipSong
+  $title[🔊 Музыка]
+  $description[⏩ Музыка была пропущена!]
+  $footer[Пропустил $username;$authorAvatar]
+  $addTimestamp`
+})
+
+bot.command({
+  name: "рес",
+  code: `$resumeSong
+$title[🔊 Музыка]
+$description[▶️ Пауза убрана!]
+$footer[Убрано с паузы $username;$authorAvatar]
+$addTimestamp`
+})
+
+bot.command({
 name: "префикс",
 aliases: ["sprefix", "sp", "prefix"],
 code: `
