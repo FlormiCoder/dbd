@@ -19,8 +19,6 @@ bot.loopCommand({
    every: 300
 })
 
-20 реакции и новый афигенный код! 
-
 bot.command({
 name: "префикс",
 aliases: ["sprefix", "sp", "prefix"],
