@@ -21,7 +21,7 @@ bot.loopCommand({
 
 bot.command({
   name: "плэй",
-  code: `$playSong[$message;1m;no;no;Не удалось найти музыку!]`
+  code: `$playSong[$message;2m;yes;yes;Не удалось найти музыку!]`
 })
 
 bot.command({
@@ -33,55 +33,6 @@ $description[**__Автор__**: [$songInfo[publisher]\\]($songInfo[publisher_ur
 $thumbnail[$songInfo[thumbnail]]
 $footer[Выполнил $username]
 $color[add8e6]`
-})
-
-bot.command({
-  name: "стоп",
-  code: `$stopSong
-  $title[🔊 Музыка]
-  $description[⏹️ Текущая музыка была выключена!]
-  $footer[Выключил $username;$authorAvatar]
-  $color[ff0000]
-  $addTimestamp`
-})
-
-bot.command({
-name: "пауза",
-code: `$pauseSong
-  $title[🔊 Музыка]
-  $description[⏸️ Музыку поставлено на паузу!]
-  $footer[Поставил на паузу $username;$authorAvatar]
-  $addTimestamp`
-})
-
-bot.command({
-  name: "громкость",
-  code: `$volume[$message]
-  $title[🔊 Музыка]
-  $description[🔉 Громкость музыки установлена на ****$message %****]
-  $footer[Громкость изменена $username;$authorAvatar]
-  $color[00ff66]
-  $addTimestamp`
-})
-
-bot.command({
-  name: "скип",
-  code: `$skipSong
-  $title[🔊 Музыка]
-  $description[⏩ Музыка была пропущена!]
-  $footer[Пропустил $username;$authorAvatar]
-  $color[00ff66]
-  $addTimestamp`
-})
-
-bot.command({
-  name: "рес",
-  code: `$resumeSong
-$title[🔊 Музыка]
-$description[▶️ Пауза убрана!]
-$footer[Убрано с паузы $username;$authorAvatar]
-$color[00ff00]
-$addTimestamp`
 })
 
 bot.command({
