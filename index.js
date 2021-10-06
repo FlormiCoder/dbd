@@ -143,5 +143,6 @@ bot.status({
 
 bot.variables({
   message: '0',
-  prefix: '/'
+  prefix: '/',
+  logID: '1'
 })
