@@ -149,7 +149,7 @@ bot.banAddCommand({ //command
 
 channel: "$getServerVar[logID]", //channel where it'll be logged
 
-code: `$title[server log] $description[пользователь <@$authorID> забанен на сервере.] $color[$getVar[color]] $footer[$serverName]` // your code
+code: `$title[Сервер логи] $description[пользователь <@$authorID> забанен на сервере.] $color[ff0000] $footer[$serverName]` // your code
 
 })
 
