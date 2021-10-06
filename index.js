@@ -4,8 +4,18 @@ const bot = new Aoijs.Bot({
 token: "ODA2MTYzNTExNjI0NTk3NTA0.YBlcRg.nZImzb0kfRgMJ6WlJewNgdVGys4", //TOKEN YOUR BOT(ТОКЕН ВАШЕГО БОТА)
 prefix: "$getServerVar[prefix]" //PREFIX YOUR BOT(ПРЕФИКС ВАШЕГО БОТА)
 })
-bot.onMessage()
+bot.onMessage();
 //commands(команды)
+bot.onBanAdd();
+bot.onChannelCreate();
+bot.onChannelDelete();
+bot.onChannelUpdate();
+bot.onMemberUpdate();
+bot.onMessageUpdate();
+bot.onMessageDelete();
+bot.onRoleCreate();
+bot.onRoleDelete();
+bot.onRoleUpdate()
 
 bot.command({
    name: "$alwaysExecute",
