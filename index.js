@@ -64,11 +64,6 @@ $color[00ff00]`
 })
 
 bot.command({
-name: "пинг", //Trigger(Триггер команды)
-code: `пинг бота $ping` //Code(Код команды)
-})
-
-bot.command({
 name: "система",
 aliases: ["sysinfo", "system"],
 usage: "система",
