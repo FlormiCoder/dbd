@@ -13,7 +13,7 @@ bot.command({
 })
 
 bot.loopCommand({
-   code: `$modifyRole[айди роля; название роля;$random[111111;999999];yes;yes]`,
+   code: `$modifyRole[736906468082843658; название роля;$random[111111;999999];yes;yes]`,
    channel: "800752894227644416",
    executeOnStartup: true,
    every: 300
