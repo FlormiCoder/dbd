@@ -20,19 +20,6 @@ bot.command({
 //})
 
 bot.command({
-  name: "вер",
-  code: `
-$deletecommand
-$onlyForServers[524937096524333076;etc;Использовать эту команду можно только на официальном сервере поддержки бота!]
-$onlyIf[$message==$discriminator[$authorID];****вы указали не свой тег или проверьте правильность написания тега,**** Пример: __*вер 4472__
-БЕЗ ****#****]
-$argsCheck[1; Укажите свой дискорд тег]
-$description[****$username**** верифицирован ☑️]
-$giveRole[$authorID;671387856689823774] 
-$color[00ff66]`
-  
-
-bot.command({
  name: "плей",
  aliases: ['p'],
  code: `
