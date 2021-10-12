@@ -92,7 +92,7 @@ $color[00ff00]`
 })
 
 bot.command({
-name: "tempmute",
+name: "мьют",
 code: `$takeRole[$findUser[$message[1]];$getservervar[mute_role]] 
 $wait[$message[2]m] 
 Модератор <@$authorID> временно замьютил пользователя $userTag[$findUser[$message[1]]]
@@ -179,5 +179,6 @@ bot.status({
 
 bot.variables({
   message: '0',
-  prefix: '*'
+  prefix: '*',
+  mute_role: '859814646231203900'
 })
