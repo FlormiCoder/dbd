@@ -1,7 +1,7 @@
 const Aoijs = require("aoi.js")
 
 const bot = new Aoijs.Bot({
-token: "ODA2MTYzNTExNjI0NTk3NTA0.YBlcRg.nZImzb0kfRgMJ6WlJewNgdVGys4", //TOKEN YOUR BOT(ТОКЕН ВАШЕГО БОТА)
+token: "ODA2MTYzNTExNjI0NTk3NTA0.YBlcRg.zQBPfzhsGQdo8KkM2bbbkJasDbo", //TOKEN YOUR BOT(ТОКЕН ВАШЕГО БОТА)
 prefix: "$getServerVar[prefix]" //PREFIX YOUR BOT(ПРЕФИКС ВАШЕГО БОТА)
 })
 bot.onMessage()
