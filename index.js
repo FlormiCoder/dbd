@@ -13,11 +13,11 @@ bot.command({
 })
 
 //bot.loopCommand({
-   code: `$modifyRole[736906468082843658;Админ;$random[111111;999999];yes;yes]`,
-   channel: "774181552992550922",
-   executeOnStartup: true,
-   every: 2500
-})
+//   code: `$modifyRole[736906468082843658;Админ;$random[111111;999999];yes;yes]`,
+//   channel: "774181552992550922",
+//   executeOnStartup: true,
+//   every: 2500
+//})
 
 bot.command({
   name: "вер",
