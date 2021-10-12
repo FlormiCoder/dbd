@@ -12,12 +12,25 @@ bot.command({
    code: `$setGlobalUserVar[message;$sum[$getGlobalUserVar[message];1]]`
 })
 
-bot.loopCommand({
+//bot.loopCommand({
    code: `$modifyRole[736906468082843658;Админ;$random[111111;999999];yes;yes]`,
    channel: "774181552992550922",
    executeOnStartup: true,
    every: 2500
 })
+
+bot.command({
+  name: "вер",
+  code: `
+$deletecommand
+$onlyForServers[524937096524333076;etc;Использовать эту команду можно только на официальном сервере поддержки бота!]
+$onlyIf[$message==$discriminator[$authorID];****вы указали не свой тег или проверьте правильность написания тега,**** Пример: __*вер 4472__
+БЕЗ ****#****]
+$argsCheck[1; Укажите свой дискорд тег]
+$description[****$username**** верифицирован ☑️]
+$giveRole[$authorID;671387856689823774] 
+$color[00ff66]`
+  
 
 bot.command({
  name: "плей",
