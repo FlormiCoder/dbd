@@ -93,10 +93,10 @@ $color[00ff00]`
 
 bot.command({
 name: "мьют",
-code: `$takeRole[$findUser[$message[1]];$getservervar[mute_role]] 
+code: `$takeRole[$findUser[$message[1]];$getServerVar[mute_role]] 
 $wait[$message[2]m] 
 Модератор <@$authorID> временно замьютил пользователя $userTag[$findUser[$message[1]]]
-$giveRole[$findUser[$message[1]];$getservervar[mute_role]] 
+$giveRole[$findUser[$message[1]];$getServerVar[mute_role]] 
 $onlyIf[$message[2]>=0;Укажите число больше 0]
 $onlyBotPerms[manageroles;У бота нету прав управлять ролями] 
 $onlyPerms[manageroles;У вас нету прав управлять ролями] 
