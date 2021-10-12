@@ -33,6 +33,17 @@ $color[00ff66]`
 })
 
 bot.command({
+name: "юзер",
+aliases: ["ui","u"],
+code: `
+$AddField[User;
+юзер: **$Nickname[$findUser[$message[1]]] | айди: **$findUser[$message[1]]**
+зашёл в дискорд: **$creationDate[$findUser[$message[1]];time];yes]
+$color[ffffff]
+`
+})
+
+bot.command({
  name: "плей",
  aliases: ['p'],
  code: `
