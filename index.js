@@ -92,21 +92,6 @@ $color[00ff00]`
 })
 
 bot.command({
-name: "мьют",
-code: `$takeRole[$findUser[$message[1]];$getServerVar[mute_role]] 
-$wait[$message[2]m] 
-Модератор <@$authorID> временно замьютил пользователя $userTag[$findUser[$message[1]]]
-$giveRole[$findUser[$message[1]];$getServerVar[mute_role]] 
-$onlyIf[$message[2]>=0;Укажите число больше 0]
-$onlyBotPerms[manageroles;У бота нету прав управлять ролями] 
-$onlyPerms[manageroles;У вас нету прав управлять ролями] 
-$onlyIf[$isNumber[$message[2]]==true;Аргумент 2 не число, пожалуйста Укажите число в минутах] 
-$onlyIf[$message[2]!=;Используйте: мьют @Пользователь <время в минутах>] 
-$suppressErrors[Ошибка, возможно роль мьюта выше чем моя роль
-Либо роль мьюта не указана] 
-})
-
-bot.command({
   name: "профиль",
   aliases: ['user'],
   cat: "Информация",
@@ -179,6 +164,5 @@ bot.status({
 
 bot.variables({
   message: '0',
-  prefix: '*',
-  mute_role: '859814646231203900'
+  prefix: '*'
 })
