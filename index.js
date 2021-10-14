@@ -25,7 +25,8 @@ bot.command({
 $addField[Помощь;Основные команды:;]
 $addField[Текущий префикс: ****$getServerVar[prefix]****]
 $addField[$getServerVar[prefix]префикс, система]
-
+$color[00ff66]`
+})
 
 bot.command({
   name: "вер",
