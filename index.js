@@ -23,12 +23,13 @@ bot.command({
   name: "вер",
   code: `
 $deletecommand
+$giveRole[$authorID;671387856689823774]
 $onlyForServers[524937096524333076;etc;Использовать эту команду можно только на официальном сервере поддержки бота!]
 $onlyIf[$message==$discriminator[$authorID];****вы указали не свой тег или проверьте правильность написания тега, **** Пример: __*вер 4472__
 БЕЗ ****#****]
 $argsCheck[1; Укажите свой дискорд тег]
-$addField[Успешно!;****$username**** верифицирован ☑️;no]
-$giveRole[$authorID;671387856689823774] 
+$title[Успешно]
+$description[****$username**** верифицирован ☑️]
 $color[00ff66]`
 })
 
