@@ -20,6 +20,14 @@ bot.command({
 //})
 
 bot.command({
+  name: "292772829272637382",
+  code: `
+$addField[Помощь;Основные команды:;]
+$addField[Текущий префикс: ****$getServerVar[prefix]****]
+$addField[$getServerVar[prefix]префикс, система]
+
+
+bot.command({
   name: "вер",
   code: `
 $deletecommand
