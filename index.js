@@ -20,11 +20,11 @@ bot.command({
 //})
 
 bot.command({
-  name: "292772829272637382",
+  name: "хелп",
   code: `
 $addField[Помощь;Основные команды:;]
 $addField[Текущий префикс: ****$getServerVar[prefix]****]
-$addField[$getServerVar[prefix]префикс, система]
+$addField[$getServerVar[prefix]префикс, система, профиль, очистить, сервер]
 $color[00ff66]`
 })
 
@@ -165,7 +165,7 @@ $color[GREEN]
 //status(статус бота)
 
 bot.status({
-  text: "за $AllMembersCount игроками | *система",
+  text: "за $AllMembersCount игроками | *хелп",
   type: "WATCHING",
   time: 12
 })
