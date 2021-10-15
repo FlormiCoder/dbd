@@ -23,8 +23,8 @@ bot.command({
   name: "хелп",
   code: `
 $addField[Помощь;Основные команды:;]
-$addField[Текущий префикс: ****$getServerVar[prefix]****]
-$addField[$getServerVar[prefix]префикс, система, профиль, очистить, сервер]
+$addField[ ;Текущий префикс: ****$getServerVar[prefix]****; ]
+$addField[ ;$getServerVar[prefix]префикс, система, профиль, очистить, сервер; ]
 $color[00ff66]`
 })
 
