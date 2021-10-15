@@ -23,6 +23,7 @@ bot.command({
   name: "хелп",
   code: `
 $title[Помощь]
+$thumbnail[$userAvatar[$authorID]]
 $description[Текущий префикс: ****$getServerVar[prefix]****
 $getServerVar[prefix]префикс, система, профиль, очистить, сервер]
 $color[00ff66]`
