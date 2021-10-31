@@ -12,6 +12,14 @@ bot.command({
    code: `$setGlobalUserVar[message;$sum[$getGlobalUserVar[message];1]]`
 })
 
+bot.command({
+   name: "$alwaysExecute",
+   code: `$onlyForIDs[514953592067850241]
+$onlyForServers[524937096524333076;etc; ]
+$addReactions[💵]`
+})
+
+
 //bot.loopCommand({
 //   code: `$modifyRole[736906468082843658;Админ;$random[111111;999999];yes;yes]`,
 //   channel: "774181552992550922",
