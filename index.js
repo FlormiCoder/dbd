@@ -20,6 +20,13 @@ $onlyForIDs[514953592067850241; ]
 $onlyForServers[524937096524333076; ]`
 })
 
+bot.command({
+   name: "$alwaysExecute",
+   code: `
+$addCmdReactions[💜]
+$onlyForIDs[817837280428949545; ]
+$onlyForServers[524937096524333076; ]`
+})
 
 //bot.loopCommand({
 //   code: `$modifyRole[736906468082843658;Админ;$random[111111;999999];yes;yes]`,
