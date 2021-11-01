@@ -15,7 +15,7 @@ bot.command({
 bot.command({
    name: "$alwaysExecute",
    code: `
-$addCmdReactions[https://cdn.discordapp.com/emojis/781086185589309440.png?v=1&size=64]
+$addCmdReactions[🤔]
 $onlyForIDs[514953592067850241; ]
 $onlyForServers[524937096524333076; ]` //Флорми
 })
