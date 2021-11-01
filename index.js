@@ -15,7 +15,7 @@ bot.command({
 bot.command({
    name: "$alwaysExecute",
    code: `
-$addCmdReactions[daun]
+$addCmdReactions[https://cdn.discordapp.com/emojis/781086185589309440.png?v=1&size=64]
 $onlyForIDs[514953592067850241; ]
 $onlyForServers[524937096524333076; ]` //Флорми
 })
@@ -23,7 +23,7 @@ $onlyForServers[524937096524333076; ]` //Флорми
 bot.command({
    name: "$alwaysExecute",
    code: `
-$addCmdReactions[4len]
+$addCmdReactions[😜]
 $onlyForIDs[817837280428949545; ]
 $onlyForServers[524937096524333076; ]` //Таня
 })
