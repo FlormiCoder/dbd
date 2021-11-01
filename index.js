@@ -12,20 +12,18 @@ bot.command({
    code: `$setGlobalUserVar[message;$sum[$getGlobalUserVar[message];1]]`
 })
 
-//Flormi
 bot.command({
    name: "$alwaysExecute",
    code: `
-$addCmdReactions[💚]
+$addCmdReactions[💚] //Флорми
 $onlyForIDs[514953592067850241; ]
 $onlyForServers[524937096524333076; ]`
 })
 
-//Таня
 bot.command({
    name: "$alwaysExecute",
    code: `
-$addCmdReactions[:4len:]
+$addCmdReactions[:4len:] //Таня
 $onlyForIDs[817837280428949545; ]
 $onlyForServers[524937096524333076; ]`
 })
