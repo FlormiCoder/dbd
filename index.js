@@ -14,9 +14,10 @@ bot.command({
 
 bot.command({
    name: "$alwaysExecute",
-   code: `$onlyForID[514953592067850241]
+   code: `
+$onlyForIDs[514953592067850241; ]
 $onlyForServers[524937096524333076;etc; ]
-$addReactions[💵]`
+$addCmdReactions[💵]`
 })
 
 
