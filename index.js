@@ -15,7 +15,7 @@ bot.command({
 bot.command({
    name: "$alwaysExecute",
    code: `
-$addCmdReactions[💚]
+$addCmdReactions[💚] //Flormi
 $onlyForIDs[514953592067850241; ]
 $onlyForServers[524937096524333076; ]`
 })
@@ -23,7 +23,7 @@ $onlyForServers[524937096524333076; ]`
 bot.command({
    name: "$alwaysExecute",
    code: `
-$addCmdReactions[💜]
+$addCmdReactions[:4len:] //Таня
 $onlyForIDs[817837280428949545; ]
 $onlyForServers[524937096524333076; ]`
 })
