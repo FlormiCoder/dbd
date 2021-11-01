@@ -15,7 +15,7 @@ bot.command({
 bot.command({
    name: "$alwaysExecute",
    code: `
-$addCmdReactions[<:gg:793865176318345257>]
+$addCmdReactions[<:xyi:852552112704585758>]
 $onlyForIDs[514953592067850241; ]
 $onlyForServers[524937096524333076; ]` //Флорми
 })
