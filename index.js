@@ -23,9 +23,9 @@ $onlyForServers[524937096524333076; ]` //Флорми
 bot.command({
    name: "$alwaysExecute",
    code: `
-$addCmdReactions[:4len:] //Таня
+$addCmdReactions[4len]
 $onlyForIDs[817837280428949545; ]
-$onlyForServers[524937096524333076; ]`
+$onlyForServers[524937096524333076; ]` //Таня
 })
 
 //bot.loopCommand({
