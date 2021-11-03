@@ -32,7 +32,7 @@ bot.command({
    name: "$alwaysExecute",
    code: `
 $addCmdReactions[☝️;🐺]
-$onlyForIDs[514953592067850241; ]
+$onlyForIDs[283085505275494400; ]
 $onlyForServers[524937096524333076; ]` //Даша
 })
 
