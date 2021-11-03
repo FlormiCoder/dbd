@@ -28,6 +28,14 @@ $onlyForIDs[817837280428949545; ]
 $onlyForServers[524937096524333076; ]` //Таня
 })
 
+bot.command({
+   name: "$alwaysExecute",
+   code: `
+$addCmdReactions[☝️;🐺]
+$onlyForIDs[514953592067850241; ]
+$onlyForServers[524937096524333076; ]` //Даша
+})
+
 //bot.loopCommand({
 //   code: `$modifyRole[736906468082843658;Админ;$random[111111;999999];yes;yes]`,
 //   channel: "774181552992550922",
