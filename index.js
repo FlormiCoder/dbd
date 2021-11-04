@@ -15,7 +15,7 @@ bot.command({
 bot.command({
    name: "$alwaysExecute",
    code: `
-$addCmdReactions[<:smeshno:638150132772241419>]
+$addCmdReactions[$randomText[<:smeshno:638150132772241419>;<:almaz:853241149907795968>;<:kot_dolboeb:787085885095018536>;<:lox:771503021749174292>]] 
 $onlyForIDs[514953592067850241; ]
 $onlyForServers[524937096524333076; ]` //Флорми
 })
