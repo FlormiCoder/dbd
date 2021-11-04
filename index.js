@@ -36,6 +36,14 @@ $onlyForIDs[283085505275494400; ]
 $onlyForServers[524937096524333076; ]` //Даша
 })
 
+bot.command({
+   name: "$alwaysExecute",
+   code: `
+$addCmdReactions[<:ebalo_psina:771843225984040961>]
+$onlyForIDs[787014512803971163; ]
+$onlyForServers[524937096524333076; ]` //Саня
+})
+
 //bot.loopCommand({
 //   code: `$modifyRole[736906468082843658;Админ;$random[111111;999999];yes;yes]`,
 //   channel: "774181552992550922",
