@@ -182,15 +182,15 @@ bot.command({
   • **Регион** - $replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$serverRegion;frankfurt; Франкфурт];brazil; Бразилия];europe; Европа];hongkong; Гонконг];india; Индия];japan; Япония];russia; Россия];singapore; Сингапур];southafrica; Южная Африка];sydney; Сидней];us-central; Центральная часть США];us-east; Восток США];us-south; Юг США];us-west; Запад США];amsterdam; Амстердам];dubai; Дубай];south-korea; Южная Корея];london; Лондон];eu-west; Западная Европа];eu-central; Центральная Европа]
   • **Уровень буста** - $replaceText[$replaceText[$checkCondition[$serverBoostLevel<2];true;Нет уровня];false;$replaceText[$replaceText[$checkCondition[$serverBoostLevel<15];true;1 (Бусты: $serverBoostLevel)];false;$replaceText[$replaceText[$checkCondition[$serverBoostLevel<30];true;2 (Бусты: $serverBoostLevel)];false;3 (Бусты: $serverBoostLevel)]]]]
   $addField[Каналы (Всего: $channelCount);<:text:815564331629412352> **Текстовые** - $channelCount[text]
-<:voice:815564247517626388> **Голосовые** - $channelCount[voice]
-<:category:815564242550915093> **Категории** - $channelCount[category]]
-$addField[Подробно о статусах;<:online:831120014639497247> **В сети** - $membersCount[$guildId;online]
-<:idle:831120069513445376> **Неактивны** - $membersCount[$guildId;idle]
-<:dnd:831120124445589544> **Не беспокоить** - $membersCount[$guildId;dnd]
-<:offline:831120530278055966> **Не в сети**- $membersCount[$guildId;offline];yes]
-$addField[Участники;<:rules:815564316010217472> **Всего** - $membersCount
-<:user_aue:817840607087165451> **Люди** - $sub[$membersCount;$botCount]
-<:bot:815564333786464257> **Боты** - $botCount;yes]
+**Голосовые** - $channelCount[voice]
+**Категории** - $channelCount[category]]
+$addField[Подробно о статусах;**В сети** - $membersCount[$guildId;online]
+**Неактивны** - $membersCount[$guildId;idle]
+**Не беспокоить** - $membersCount[$guildId;dnd]
+**Не в сети**- $membersCount[$guildId;offline];yes]
+$addField[Участники;**Всего** - $membersCount
+**Люди** - $sub[$membersCount;$botCount]
+**Боты** - $botCount;yes]
 $color[GREEN]
 `
 })
