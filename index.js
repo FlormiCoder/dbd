@@ -60,7 +60,7 @@ $onlyForServers[524937096524333076; ]` //Саня
 //   every: 2500
 //})
 
-bot.awaitedCommand({
+bot.command({
   name: "бонус",
   code: `
 $description[Ваш баланс: ****$getUserVar[money]****]
