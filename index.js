@@ -63,8 +63,17 @@ $onlyForServers[524937096524333076; ]` //Саня
 bot.command({
   name: "бонус",
   code: `
-$description[Ваш баланс: ****$getUserVar[money]****]
-$setUserVar[money;$sum[$getUserVar[money];50]]`
+$description[Вы получили бонус в размере **50** монет]
+$setUserVar[money;$sum[$getUserVar[money];50]]
+$cooldown[10m;Вы недавно уже получили бонус, поэтому возвращайтесь через **%time-m%** чтобы ещё забрать бонус]
+$color[00ff00]`
+})
+
+bot.command({
+  name: "баланс",
+  code: `
+$description[Ваш баланс: **__$getUserVar[money]__**]
+$color[00ff66]`
 })
 
 bot.command({
