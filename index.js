@@ -224,5 +224,6 @@ bot.status({
 bot.variables({
   message: '0',
   prefix: '*',
-  work: '0'
+  work: '0',
+  money: '100'
 })
