@@ -63,7 +63,7 @@ $onlyForServers[524937096524333076; ]` //Саня
 bot.awaitedCommand({
   name: "бонус",
   code: `
-Ваш баланс: ****$getUserVar[money]****
+$description[Ваш баланс: ****$getUserVar[money]****]
 $setUserVar[money;$sum[$getUserVar[money];50]]`
 })
 
