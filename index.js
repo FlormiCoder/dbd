@@ -1,7 +1,7 @@
 const Aoijs = require("aoi.js")
 
 const bot = new Aoijs.Bot({
-token: "ODA2MTYzNTExNjI0NTk3NTA0.YBlcRg.zQBPfzhsGQdo8KkM2bbbkJasDbo", //TOKEN YOUR BOT(ТОКЕН ВАШЕГО БОТА)
+token: "ODA2MTYzNTExNjI0NTk3NTA0.YBlcRg.YlWFSDaWRIg0MJ0wf1AqfQ5DMU0", //TOKEN YOUR BOT(ТОКЕН ВАШЕГО БОТА)
 prefix: "$getServerVar[prefix]" //PREFIX YOUR BOT(ПРЕФИКС ВАШЕГО БОТА)
 })
 bot.onMessage()
@@ -44,14 +44,14 @@ $onlyForIDs[787014512803971163; ]
 $onlyForServers[524937096524333076; ]` //Саня
 })
 
-bot.command({
-   name: "$alwaysExecute",
-   code: `
-$deletecommand
-$deleteIn[5s]
-$description[успех]
-$setGlobalVar[work;$message]
-})
+//bot.command({
+//   name: "$alwaysExecute",
+//   code: `
+//$deletecommand
+//$deleteIn[5s]
+//$description[успех]
+//$setGlobalVar[work;$message]
+//})
 
 //bot.loopCommand({
 //   code: `$modifyRole[736906468082843658;Админ;$random[111111;999999];yes;yes]`,
