@@ -41,7 +41,7 @@ bot.command({
    code: `
 $addCmdReactions[<:ebalo_psina:771843225984040961>]
 $onlyForIDs[787014512803971163; ]
-$onlyForServers[524937096524333076; ]` //Саня
+$onlyForServers[524937096524333076;914910747052617748; ]` //Саня
 })
 
 //bot.command({
