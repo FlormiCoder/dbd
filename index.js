@@ -41,7 +41,8 @@ bot.command({
    code: `
 $addCmdReactions[$randomText[<:ebalo_psina:771843225984040961>;<:fdeddcb27e42b23bc6d2d7f05c3b2745:915570035207053362>]]
 $onlyForIDs[787014512803971163; ]
-$onlyForServers[524937096524333076;914910747052617748; ]` //Саня
+$onlyForServers[524937096524333076;914910747052617748; ]
+$suppressErrors` //Саня
 })
 
 //bot.command({
