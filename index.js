@@ -62,6 +62,21 @@ $suppressErrors` //Саня
 //})
 
 bot.command({
+    name: "флорми",
+    code: `
+$title[Вот что делает сейчас Флорми]
+$description[$setGlobalVar[flormi]]
+$color[00ff66]`
+})
+
+bot.command({
+    name: "сет",
+    code: `
+$description[Установнено > $message]
+$color[00ff66]`
+})
+
+bot.command({
   name: "бонус",
   code: `
 $description[Вы получили бонус в размере **50** монет]
@@ -235,5 +250,6 @@ bot.variables({
   message: '0',
   prefix: '*',
   work: '0',
-  money: '100'
+  money: '100',
+  flormi: 'test'
 })
