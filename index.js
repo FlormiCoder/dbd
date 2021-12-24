@@ -65,7 +65,7 @@ bot.command({
     name: "флорми",
     code: `
 $title[Вот что делает сейчас Флорми]
-$description[$setGlobalVar[flormi]]
+$description[$getGlobalVar[flormi]]
 $color[00ff66]`
 })
 
@@ -73,6 +73,7 @@ bot.command({
     name: "сет",
     code: `
 $description[Установнено > $message]
+$setGlobalVar[$message]
 $color[00ff66]`
 })
 
