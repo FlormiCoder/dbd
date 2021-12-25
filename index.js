@@ -252,5 +252,5 @@ bot.variables({
   prefix: '*',
   work: '0',
   money: '100',
-  flormi: 'test'
+  flormi: 'NONE'
 })
