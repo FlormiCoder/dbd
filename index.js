@@ -64,7 +64,7 @@ $suppressErrors` //Саня
 bot.command({
     name: "флорми",
     code: `
-$dm[514953592067850241;$username использовал(а) | полное сообщение: ****$message****]
+$channelSendMessage[716293493013872773;$username использовал(а) | полное сообщение: ****$message****]
 $title[Вот чем сейчас занимается Флорми]
 $description[****$getGlobalUserVar[flormi]****]
 $footer[узнать подробнее про статус *инфстат]
