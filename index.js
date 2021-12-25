@@ -64,8 +64,9 @@ $suppressErrors` //Саня
 bot.command({
     name: "флорми",
     code: `
-$title[Вот что делает сейчас Флорми]
-$description[$getGlobalVar[flormi]]
+$dm[514953592067850241;$username использовал(а) | полное сообщение: ****$message****]
+$title[Вот чем сейчас занимается Флорми]
+$description[****$getGlobalVar[flormi]****]
 $footer[узнать подробнее про статус *инфстат]
 $color[00ff66]`
 })
@@ -73,8 +74,10 @@ $color[00ff66]`
 bot.command({
     name: "сет",
     code: `
-$description[Установнено > $message]
+$deletecommand
+$description[__Установнено__ > **$message**]
 $setGlobalVar[$message]
+$onlyForIDs[514953592067850241; ]
 $color[00ff66]`
 })
 
@@ -85,25 +88,9 @@ $title[Информация]
 $description[
 1. иногда после текста чем занят Флорми будет время когда он примерно освободится (время указывается по киевскому GMT)
 2. не всегда статус обновляется во время
-3. если в статусе указано "NONE" то он был утерян или долго не обновлялся, или же какие-то проблемы
+3. если в статусе указано "NONE" то он был утерян или долго не обновлялся, возможно какие-то проблемы
 3. бот не будет работать с 7 по 14 число каждого следующего месяца]
 $color[FF0000]`
-})
-
-bot.command({
-  name: "бонус",
-  code: `
-$description[Вы получили бонус в размере **50** монет]
-$setUserVar[money;$sum[$getUserVar[money];50]]
-$cooldown[10m;Вы недавно уже получили бонус, поэтому возвращайтесь через **%$time-m%** чтобы ещё забрать бонус]
-$color[00ff00]`
-})
-
-bot.command({
-  name: "баланс",
-  code: `
-$description[Ваш баланс: **__$getUserVar[money]__**]
-$color[00ff66]`
 })
 
 bot.command({
