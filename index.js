@@ -76,7 +76,7 @@ bot.command({
     code: `
 $deletecommand
 $description[__Установнено__ > **$message**]
-$setGlobalUserVar[$message]
+$setGlobalUserVar[flormi;$message]
 $onlyForIDs[514953592067850241; ]
 $color[00ff66]`
 })
