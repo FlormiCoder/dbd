@@ -66,7 +66,7 @@ bot.command({
     code: `
 $channelSendMessage[716293493013872773;$username использовал(а) | полное сообщение: ****$message****]
 $title[Вот чем сейчас занимается Флорми]
-$description[****$getGlobalVar[flormi]****]
+$description[****$getVar[flormi]****]
 $footer[узнать подробнее про статус *инфстат]
 $color[00ff66]`
 })
@@ -76,7 +76,7 @@ bot.command({
     code: `
 $deletecommand
 $description[__Установнено__ > **$message**]
-$setGlobalVar[flormi;$message]
+$setVar[flormi;$message]
 $onlyForIDs[514953592067850241; ]
 $color[00ff66]`
 })
