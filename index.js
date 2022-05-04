@@ -240,7 +240,7 @@ $color[GREEN]
 //status(статус бота)
 
 bot.status({
-  text: "за $AllMembersCount игроками | *хелп",
+  text: "за $AllMembersCount игрoками | *хелп",
   type: "WATCHING",
   time: 12
 })
